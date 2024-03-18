@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{035ED95B-01F3-4809-B36B-3AA37BB49996}|3d_Comp_3.vcxproj|D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{035ED95B-01F3-4809-B36B-3AA37BB49996}|3d_Comp_3.vcxproj|solutionrelative:Shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{035ED95B-01F3-4809-B36B-3AA37BB49996}|3d_Comp_3.vcxproj|D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{035ED95B-01F3-4809-B36B-3AA37BB49996}|3d_Comp_3.vcxproj|solutionrelative:Camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{035ED95B-01F3-4809-B36B-3AA37BB49996}|3d_Comp_3.vcxproj|D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{035ED95B-01F3-4809-B36B-3AA37BB49996}|3d_Comp_3.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -27,32 +19,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Shader.cpp",
-              "DocumentMoniker": "D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Shader.cpp",
-              "RelativeDocumentMoniker": "Shader.cpp",
-              "ToolTip": "D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Shader.cpp",
-              "RelativeToolTip": "Shader.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-15T13:03:27.291Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Camera.cpp",
-              "DocumentMoniker": "D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Camera.cpp",
-              "RelativeDocumentMoniker": "Camera.cpp",
-              "ToolTip": "D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Camera.cpp",
-              "RelativeToolTip": "Camera.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-15T13:03:25.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Main.cpp",
               "DocumentMoniker": "D:\\School\\3D Prog\\Compulsory_3\\3d_Comp_3\\Main.cpp",
               "RelativeDocumentMoniker": "Main.cpp",
@@ -60,7 +26,7 @@
               "RelativeToolTip": "Main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-15T13:03:23.409Z",
+              "WhenOpened": "2024-03-18T13:02:21.707Z",
               "EditorCaption": ""
             }
           ]
