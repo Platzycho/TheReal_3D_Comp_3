@@ -1,4 +1,16 @@
-﻿LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+﻿  Main.cpp
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\Main.cpp(231,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\Main.cpp(232,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\Main.cpp(236,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\Main.cpp(237,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\Main.cpp(238,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\Main.cpp(239,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\Main.cpp(252,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+Main.obj : error LNK2019: unresolved external symbol "public: void __cdecl Shader::use(void)" (?use@Shader@@QEAAXXZ) referenced in function "void __cdecl framebuffer_size_callback(struct GLFWwindow *,int,int)" (?framebuffer_size_callback@@YAXPEAUGLFWwindow@@HH@Z)
+Main.obj : error LNK2019: unresolved external symbol "public: struct glm::mat<4,4,float,0> __cdecl Camera::GetViewMatrix(void)" (?GetViewMatrix@Camera@@QEAA?AU?$mat@$03$03M$0A@@glm@@XZ) referenced in function main
+Main.obj : error LNK2019: unresolved external symbol "public: void __cdecl Camera::ProcessKeyboard(enum Camera_Movement,float)" (?ProcessKeyboard@Camera@@QEAAXW4Camera_Movement@@M@Z) referenced in function "void __cdecl processInput(struct GLFWwindow *)" (?processInput@@YAXPEAUGLFWwindow@@@Z)
 Main.obj : error LNK2019: unresolved external symbol "public: void __cdecl Camera::ProcessMouseMovement(float,float,bool)" (?ProcessMouseMovement@Camera@@QEAAXMM_N@Z) referenced in function "void __cdecl mouse_callback(struct GLFWwindow *,double,double)" (?mouse_callback@@YAXPEAUGLFWwindow@@NN@Z)
 Main.obj : error LNK2019: unresolved external symbol "public: void __cdecl Camera::ProcessMouseScroll(float)" (?ProcessMouseScroll@Camera@@QEAAXM@Z) referenced in function "void __cdecl scroll_callback(struct GLFWwindow *,double,double)" (?scroll_callback@@YAXPEAUGLFWwindow@@NN@Z)
-D:\School\3D Prog\Compulsory_3\3d_Comp_3\x64\Debug\3d_Comp_3.exe : fatal error LNK1120: 2 unresolved externals
+Main.obj : error LNK2019: unresolved external symbol "private: void __cdecl Camera::updateCameraVectors(void)" (?updateCameraVectors@Camera@@AEAAXXZ) referenced in function "public: __cdecl Camera::Camera(struct glm::vec<3,float,0>,struct glm::vec<3,float,0>,float,float)" (??0Camera@@QEAA@U?$vec@$02M$0A@@glm@@0MM@Z)
+D:\School\3D Prog\Compulsory_3\3d_Comp_3\x64\Debug\3d_Comp_3.exe : fatal error LNK1120: 6 unresolved externals
