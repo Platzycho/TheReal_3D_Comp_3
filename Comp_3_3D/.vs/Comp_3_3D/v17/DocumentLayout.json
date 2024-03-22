@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "Scene.cpp",
               "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Scene.cpp",
               "RelativeToolTip": "Scene.cpp",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADMAAAAaAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-19T13:16:59.105Z",
               "EditorCaption": ""
@@ -75,8 +75,7 @@
               "RelativeToolTip": "Scene.h",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAAD4AAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T12:40:00.679Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T12:40:00.679Z"
             },
             {
               "$type": "Document",
@@ -88,8 +87,7 @@
               "RelativeToolTip": "Window.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T12:39:40.659Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T12:39:40.659Z"
             },
             {
               "$type": "Document",
@@ -101,8 +99,7 @@
               "RelativeToolTip": "Application.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T11:45:04.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T11:45:04.69Z"
             },
             {
               "$type": "Document",
@@ -114,8 +111,7 @@
               "RelativeToolTip": "Application.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T11:45:01.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T11:45:01.393Z"
             },
             {
               "$type": "Document",
@@ -127,8 +123,7 @@
               "RelativeToolTip": "shader.vs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-19T11:10:14.696Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T11:10:14.696Z"
             },
             {
               "$type": "Document",
@@ -140,8 +135,7 @@
               "RelativeToolTip": "shader.fs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2024-03-19T11:10:13.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T11:10:13.777Z"
             },
             {
               "$type": "Document",
@@ -153,8 +147,7 @@
               "RelativeToolTip": "Cube.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T11:04:20.137Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T11:04:20.137Z"
             },
             {
               "$type": "Document",
@@ -166,8 +159,7 @@
               "RelativeToolTip": "Cube.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T11:04:18.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T11:04:18.048Z"
             },
             {
               "$type": "Document",
@@ -179,8 +171,7 @@
               "RelativeToolTip": "Main.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAKYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T09:51:37.607Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:51:37.607Z"
             }
           ]
         }
