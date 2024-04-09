@@ -7,7 +7,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 struct Vertex {
-	glm::vec3 Position, Color;
+	glm::vec3 Position, Color, Barycentric;
 };
 
 struct CubeCollision {
@@ -26,9 +26,7 @@ public:
 		float posX, float posY, float posZ);
 	~Cube();
 	void Draw(Shader& shader);
-	void UpdatePosition(glm::vec3 direction, float deltaTime);
 	void SetRotation(float angle, glm::vec3 axis);
-	void CleanUp();
 	void GenerateCube(float w, float h, float d, float r, float g, float b);
 	static bool collisionDetection(const CubeCollision& cube1, const CubeCollision& cube2);
 
@@ -40,7 +38,6 @@ private:
 
 	unsigned int VAO, VBO, EBO;
 	glm::vec3 position;
-	glm::vec3 newPosition;
 	glm::vec3 scale;
 	glm::mat4 modelMatrix;
 	glm::vec3 rotationAxis;

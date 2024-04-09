@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "Cube.h"
 #include "Shader.h"
@@ -27,16 +26,10 @@ void Cube::Draw(Shader& shader)
     shader.use();
     shader.setMat4("model", modelMatrix);
     glBindVertexArray(VAO);
-    glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
+    glDrawArrays(GL_TRIANGLES, 0, vertices.size());
     glBindVertexArray(0);
 
 
-}
-
-void Cube::UpdatePosition(glm::vec3 direction, float deltaTime)
-{
-
-    position += direction * 0.1f;
 }
 
 void Cube::SetRotation(float angle, glm::vec3 axis)
@@ -58,12 +51,6 @@ void Cube::SetRotation(float angle, glm::vec3 axis)
     }*/
 }
 
-void Cube::CleanUp()
-{
-    glDeleteVertexArrays(1, &VAO);
-    glDeleteBuffers(1, &VBO);
-    glDeleteBuffers(1, &EBO);
-}
 
 bool Cube::collisionDetection(const CubeCollision& cube1, const CubeCollision& cube2)
 {
@@ -88,53 +75,69 @@ void Cube::GenerateCube(float w, float h, float d, float r, float g, float b) {
 
     glm::vec3 color = { r, g, b };
 
-    vertices = {
-        // Front face
-        {{-hw, -hh,  hd}, color}, // Bottom Left
-        {{ hw, -hh,  hd}, color}, // Bottom Right
-        {{ hw,  hh,  hd}, color}, // Top Right
-        {{-hw,  hh,  hd}, color}, // Top Left
-        // Back face
-        {{-hw, -hh, -hd}, color}, // Bottom Left
-        {{ hw, -hh, -hd}, color}, // Bottom Right
-        {{ hw,  hh, -hd}, color}, // Top Right
-        {{-hw,  hh, -hd}, color}, // Top Left
-        // Left face
-        {{-hw, -hh, -hd}, color}, // Bottom Left
-        {{-hw, -hh,  hd}, color}, // Bottom Right
-        {{-hw,  hh,  hd}, color}, // Top Right
-        {{-hw,  hh, -hd}, color}, // Top Left
-        // Right face
-        {{ hw, -hh,  hd}, color}, // Bottom Left
-        {{ hw, -hh, -hd}, color}, // Bottom Right
-        {{ hw,  hh, -hd}, color}, // Top Right
-        {{ hw,  hh,  hd}, color}, // Top Left
-        // Top face
-        {{-hw,  hh,  hd}, color}, // Bottom Left
-        {{ hw,  hh,  hd}, color}, // Bottom Right
-        {{ hw,  hh, -hd}, color}, // Top Right
-        {{-hw,  hh, -hd}, color}, // Top Left
-        // Bottom face
-        {{-hw, -hh, -hd}, color}, // Bottom Left
-        {{ hw, -hh, -hd}, color}, // Bottom Right
-        {{ hw, -hh,  hd}, color}, // Top Right
-        {{-hw, -hh,  hd}, color}, // Top Left
+    glm::vec3 baryCoords[] = {
+
+        {1.f, 0.f, 0.f},
+        {0.f, 1.f, 0.f},
+        {0.f, 0.f, 1.f}
     };
 
-    indices = {
-        // Front
-        0, 1, 2, 2, 3, 0,
-        // Back
-        4, 5, 6, 6, 7, 4,
-        // Left
-        8, 9, 10, 10, 11, 8,
-        // Right
-        12, 13, 14, 14, 15, 12,
-        // Top
-        16, 17, 18, 18, 19, 16,
-        // Bottom
-        20, 21, 22, 22, 23, 20
+    vertices = {
+        // Front face
+        {{ hw, -hh, hd}, color, baryCoords[0]}, // Bottom Right
+        {{-hw, -hh, hd}, color, baryCoords[1]}, // Bottom Left
+        {{ hw, hh, hd}, color, baryCoords[2]}, // Top Right
+
+        {{ hw, hh, hd}, color, baryCoords[0]},//Top Right
+        {{-hw, hh, hd}, color, baryCoords[1]},// Top Left
+        {{-hw, -hh, hd}, color, baryCoords[2]}, //Bottom Left
+
+        // Back face
+        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
+        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
+        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
+
+        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
+        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
+        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
+
+        // Left face
+        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
+        {{-hw, -hh,  hd}, color, baryCoords[1]}, // Bottom Right
+        {{-hw,  hh,  hd}, color, baryCoords[2]}, // Top Right
+
+        {{-hw,  hh,  hd}, color, baryCoords[0]}, // Top Right
+        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
+        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
+        // Right face
+
+        {{ hw, -hh,  hd}, color, baryCoords[0]}, // Bottom Left
+        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
+        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
+
+        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
+        {{ hw,  hh,  hd}, color, baryCoords[1]}, // Top Left
+        {{ hw, -hh,  hd}, color, baryCoords[2]}, // Bottom Left
+
+        // Top face
+        {{-hw,  hh,  hd}, color, baryCoords[0]}, // Bottom Left
+        {{ hw,  hh,  hd}, color, baryCoords[1]}, // Bottom Right
+        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
+
+        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
+        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
+        {{-hw,  hh,  hd}, color, baryCoords[2]}, // Bottom Left
+
+        // Bottom face
+        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
+        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
+        {{ hw, -hh,  hd}, color, baryCoords[2]}, // Top Right
+
+        {{ hw, -hh,  hd}, color, baryCoords[0]}, // Top Right
+        {{-hw, -hh,  hd}, color, baryCoords[1]}, // Top Left
+        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
     };
+
 }
 
 
@@ -142,14 +145,11 @@ void Cube::setupMesh()
 {
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
-    glGenBuffers(1, &EBO);
 
     glBindVertexArray(VAO);
+
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
 
     // Position attribute
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Position));
@@ -158,6 +158,10 @@ void Cube::setupMesh()
     // Color attribute
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Color));
     glEnableVertexAttribArray(1);
+
+    // Barycentric coord
+    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Barycentric));
+    glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindVertexArray(0);
