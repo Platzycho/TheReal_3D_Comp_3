@@ -2,7 +2,7 @@
 #include "Cube.h"
 #include "Shader.h"
 
-std::vector<CubeCollision> Cube::cubes = {};
+std::vector<Collision> Cube::cubes = {};
 
 Cube::Cube(float width, float height, float depth, float r, float g, float b, float posX, float posY, float posZ) : position(glm::vec3(posX, posY, posZ)), scale(glm::vec3(1.0f, 1.0f, 1.0f))
 {
@@ -52,7 +52,7 @@ void Cube::SetRotation(float angle, glm::vec3 axis)
 }
 
 
-bool Cube::collisionDetection(const CubeCollision& cube1, const CubeCollision& cube2)
+bool Cube::collisionDetection(const Collision& cube1, const Collision& cube2)
 {
     glm::vec3 minA = cube1.position - cube1.size * 0.5f;
     glm::vec3 maxA = cube1.position + cube1.size * 0.5f;

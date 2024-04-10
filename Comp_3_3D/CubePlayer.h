@@ -1,21 +1,6 @@
 #pragma once
 
-#include <vector>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
-struct PlayerVertex {
-	glm::vec3 Position, Barycentric;
-	glm::vec2 TexMex;
-};
-
-struct PlayerCollision {
-	glm::vec3 position, size;
-
-	PlayerCollision(glm::vec3 pos, glm::vec3 sz) : position(pos), size(sz) {}
-};
+#include "Includes.h"
 
 //struct AABB {
 //	glm::vec3 min;
@@ -46,7 +31,7 @@ public:
 	void UpdatePosition(glm::vec3 direction);
 	void SetRotation(float angle, glm::vec3 axis);
 	void GeneratePlayer(float w, float h, float d, float r, float g, float b);
-	static bool collisionDetection(const PlayerCollision& cube1, const PlayerCollision& cube2);
+	static bool collisionDetection(const Collision& cube1, const Collision& cube2);
 	//bool CheckAABBCollision(const AABB& a, const AABB& b);
 
 
@@ -59,7 +44,7 @@ private:
 	glm::vec3 scale;
 	glm::mat4 modelMatrix;
 	glm::vec3 rotationAxis;
-	std::vector<PlayerVertex> vertices;
+	std::vector<Vertex> vertices;
 	std::vector<unsigned int> indices;
 
 	float speedControl = 0.5f;

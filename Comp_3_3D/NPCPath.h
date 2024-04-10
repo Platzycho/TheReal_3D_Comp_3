@@ -1,16 +1,5 @@
 #pragma once
-
-#include <vector>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
-struct PathVertex {
-	glm::vec3 Position, Barycentric;
-	glm::vec2 TexMex;
-
-};
+#include "Includes.h"
 
 class Shader;
 
@@ -33,7 +22,7 @@ private:
 	glm::vec3 scale;
 	glm::mat4 modelMatrix;
 	glm::vec3 rotationAxis;
-	std::vector<PathVertex> vertices;
+	std::vector<Vertex> vertices;
 
 	float rotationAngle;
 

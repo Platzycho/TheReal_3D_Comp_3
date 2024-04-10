@@ -1,13 +1,9 @@
-﻿  CubePlayer.cpp
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\CubePlayer.cpp(27,48): warning C4267: 'argument': conversion from 'size_t' to 'GLsizei', possible loss of data
-  Main.cpp
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(206,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(207,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(211,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(212,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(213,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(214,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(227,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+﻿  Main.cpp
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(209,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(210,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(214,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(215,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(216,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(217,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(230,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   Comp_3_3D.vcxproj -> C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\x64\Debug\Comp_3_3D.exe

@@ -1,8 +1,9 @@
 #include <iostream>
 #include "Shader.h"
 #include "Pyramid.h"
+#include "Structs.h"
 
-std::vector<PyraCollision> Pyramid::pyroMids = {};
+std::vector<Collision> Pyramid::pyroMids = {};
 
 Pyramid::Pyramid(float baseSide, float height, float r, float g, float b, float posX, float posY, float posZ) : Position(glm::vec3(posX, posY, posZ)), Scale(glm::vec3(1.0f, 1.0f, 1.0f))
 {
@@ -22,7 +23,6 @@ Pyramid::~Pyramid()
 void Pyramid::Draw(Shader& shader)
 {
     shader.use();
-
     shader.setMat4("model", modelMatrix);
     glBindVertexArray(VAO);
     glDrawArrays(GL_TRIANGLES, 0, vertices.size());
@@ -73,18 +73,18 @@ void Pyramid::SetupMesh()
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(PyraVertex), vertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
 
     // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(PyraVertex), (void*)offsetof(PyraVertex, Position));
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Position));
     glEnableVertexAttribArray(0);
 
     // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PyraVertex), (void*)offsetof(PyraVertex, Barycentric));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Barycentric));
     glEnableVertexAttribArray(1);
 
     // Barycentric coord
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PyraVertex), (void*)offsetof(PyraVertex, TexMex));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexMex));
     glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);

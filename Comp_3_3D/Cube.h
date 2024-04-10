@@ -5,17 +5,7 @@
 #include <GLFW/glfw3.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-
-struct Vertex {
-	glm::vec3 Position, Barycentric;
-	glm::vec2 TexMex;
-};
-
-struct CubeCollision {
-	glm::vec3 position, size;
-
-	CubeCollision(glm::vec3 pos, glm::vec3 sz) : position(pos), size(sz) {}
-};
+#include "Structs.h"
 
 class Shader;
 
@@ -29,9 +19,9 @@ public:
 	void Draw(Shader& shader);
 	void SetRotation(float angle, glm::vec3 axis);
 	void GenerateCube(float w, float h, float d, float r, float g, float b);
-	static bool collisionDetection(const CubeCollision& cube1, const CubeCollision& cube2);
+	static bool collisionDetection(const Collision& cube1, const Collision& cube2);
 
-	static std::vector<CubeCollision> cubes;
+	static std::vector<Collision> cubes;
 
 
 private:

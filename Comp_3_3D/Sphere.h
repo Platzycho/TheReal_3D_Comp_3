@@ -1,22 +1,7 @@
 #pragma once
-#include <vector>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
+#include "Includes.h"
 #include "NPCPath.h"
 
-struct SphereVertex {
-	glm::vec3 Position, Barycentric;
-	glm::vec2 TexMex;
-
-};
-
-struct SphereCollision {
-	glm::vec3 Position, Scale;
-
-	SphereCollision(glm::vec3 pos, glm::vec3 sz) : Position(pos), Scale(sz) {}
-};
 
 class NPCPath;
 
@@ -32,11 +17,11 @@ public:
 	void GenerateSphere(float radius, unsigned int sectCount, unsigned int stkCount, float r, float g, float b);
 	void SetupMesh();
 
-	static std::vector<SphereCollision> spheres;
+	static std::vector<Collision> spheres;
 
 private:
 	unsigned int VAO, VBO, EBO;
-	std::vector<SphereVertex> vertices;
+	std::vector<Vertex> vertices;
 	glm::vec3 Position;
 	glm::vec3 Scale;
 	glm::mat4 modelMatrix;

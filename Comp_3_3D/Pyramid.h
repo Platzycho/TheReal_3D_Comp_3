@@ -1,22 +1,5 @@
 #pragma once
-
-#include <vector>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
-struct PyraVertex {
-	glm::vec3 Position, Barycentric;
-	glm::vec2 TexMex;
-
-};
-
-struct PyraCollision {
-	glm::vec3 Position, Scale;
-
-	PyraCollision(glm::vec3 pos, glm::vec3 sz) : Position(pos), Scale(sz) {}
-};
+#include "Includes.h"
 
 class Pyramid
 {
@@ -27,11 +10,11 @@ public:
 	void GeneratePyramid(float baseSide, float height, float r, float g, float b);
 	void SetupMesh();
 
-	static std::vector<PyraCollision> pyroMids;
+	static std::vector<Collision> pyroMids;
 
 private:
 	unsigned int VAO, VBO;
-	std::vector<PyraVertex> vertices;
+	std::vector<Vertex> vertices;
 	glm::vec3 Position;
 	glm::vec3 Scale;
 	glm::mat4 modelMatrix;

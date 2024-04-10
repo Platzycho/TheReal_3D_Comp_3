@@ -48,18 +48,18 @@ void NPCPath::SetupMesh()
 
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	// Correctly calculate the size based on the entire vertex structure
-	glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(PathVertex), vertices.data(), GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
 
 	// Position attribute
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(PathVertex), (void*)offsetof(PathVertex, Position));
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Position));
 	glEnableVertexAttribArray(0);
 
 	// Color attribute
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PathVertex), (void*)offsetof(PathVertex, Barycentric));
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Barycentric));
 	glEnableVertexAttribArray(1);
 
 	// Barycentric attribute 
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PathVertex), (void*)offsetof(PathVertex, TexMex));
+	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexMex));
 	glEnableVertexAttribArray(2);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);

@@ -2,7 +2,6 @@
 #include "Cube.h"
 #include "Shader.h"
 
-
 CubePlayer::CubePlayer(float width, float height, float depth, float r, float g, float b, float posX, float posY, float posZ) : position(glm::vec3(posX, posY, posZ)), scale(glm::vec3(1.0f, 1.0f, 1.0f))
 {
     GeneratePlayer(width, height, depth, r, g, b);
@@ -112,7 +111,7 @@ void CubePlayer::SetRotation(float angle, glm::vec3 axis)
     updateModelMatrix();
 }
 
-bool CubePlayer::collisionDetection(const PlayerCollision& cube1, const PlayerCollision& cube2)
+bool CubePlayer::collisionDetection(const Collision& cube1, const Collision& cube2)
 {
     glm::vec3 minA = cube1.position - cube1.size * 0.5f;
     glm::vec3 maxA = cube1.position + cube1.size * 0.5f;
@@ -213,18 +212,18 @@ void CubePlayer::setupMesh()
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(PlayerVertex), vertices.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), vertices.data(), GL_STATIC_DRAW);
 
     // Position attribute
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(PlayerVertex), (void*)offsetof(PlayerVertex, Position));
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Position));
     glEnableVertexAttribArray(0);
 
     // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PlayerVertex), (void*)offsetof(PlayerVertex, Barycentric));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Barycentric));
     glEnableVertexAttribArray(1);
 
     // Barycentric coord
-    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PlayerVertex), (void*)offsetof(PlayerVertex, TexMex));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexMex));
     glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
