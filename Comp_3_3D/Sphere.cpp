@@ -33,8 +33,8 @@ void Sphere::UpdatePosition(const NPCPath& path, float deltaTime)
 {
     pathParameter += (movingForward ? 1 : -1) * deltaTime * speed;
 
-    if (pathParameter >= 1.0f) {
-        pathParameter = 1.0f;
+    if (pathParameter >= 0.2f) {
+        pathParameter = 0.2f;
         movingForward = false;
     }
     else if (pathParameter <= 0.0f) {

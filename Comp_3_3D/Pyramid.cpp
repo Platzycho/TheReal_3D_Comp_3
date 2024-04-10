@@ -50,18 +50,18 @@ void Pyramid::GeneratePyramid(float baseSide, float height, float r, float g, fl
 
     glm::vec3 topVertex = glm::vec3(0.f, height, 0.f);
 
-    vertices.push_back({ baseVertices[0], color, baryCoords[0] });
-    vertices.push_back({ baseVertices[1], color, baryCoords[1] });
-    vertices.push_back({ baseVertices[2], color, baryCoords[2] });
+    vertices.push_back({ baseVertices[0], baryCoords[0], {1.0f, 0.0f}});
+    vertices.push_back({ baseVertices[1], baryCoords[1], {0.0f, 0.0f} });
+    vertices.push_back({ baseVertices[2], baryCoords[2], {1.0f, 1.0f} });
 
-    vertices.push_back({ baseVertices[0], color, baryCoords[0] });
-    vertices.push_back({ baseVertices[2], color, baryCoords[1] });
-    vertices.push_back({ baseVertices[3], color, baryCoords[2] });
+    vertices.push_back({ baseVertices[0], baryCoords[0], {1.0f, 1.0f} });
+    vertices.push_back({ baseVertices[2], baryCoords[1], {0.0f, 1.0f} });
+    vertices.push_back({ baseVertices[3], baryCoords[2], {0.0f, 0.0f} });
 
     for (int i = 0; i < 4; ++i) {
-        vertices.push_back({ baseVertices[i], color, baryCoords[0] });
-        vertices.push_back({ baseVertices[(i + 1) % 4] , color, baryCoords[1] });
-        vertices.push_back({ topVertex, color, baryCoords[2] });
+        vertices.push_back({ baseVertices[i], baryCoords[0], {1.0f, 0.0f} });
+        vertices.push_back({ baseVertices[(i + 1) % 4] , baryCoords[1], {0.0f, 0.0f} });
+        vertices.push_back({ topVertex, baryCoords[2], {1.0f, 1.0f} });
     }
 }
 
@@ -80,11 +80,11 @@ void Pyramid::SetupMesh()
     glEnableVertexAttribArray(0);
 
     // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PyraVertex), (void*)offsetof(PyraVertex, Color));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PyraVertex), (void*)offsetof(PyraVertex, Barycentric));
     glEnableVertexAttribArray(1);
 
     // Barycentric coord
-    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(PyraVertex), (void*)offsetof(PyraVertex, Barycentric));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PyraVertex), (void*)offsetof(PyraVertex, TexMex));
     glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);

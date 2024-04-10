@@ -2,7 +2,6 @@
 #include "Cube.h"
 #include "Shader.h"
 
-std::vector<PlayerCollision> CubePlayer::players = {};
 
 CubePlayer::CubePlayer(float width, float height, float depth, float r, float g, float b, float posX, float posY, float posZ) : position(glm::vec3(posX, posY, posZ)), scale(glm::vec3(1.0f, 1.0f, 1.0f))
 {
@@ -11,7 +10,6 @@ CubePlayer::CubePlayer(float width, float height, float depth, float r, float g,
     rotationAngle = 0;
     rotationAxis = glm::vec3(1.0f, 1.0f, 1.0f);
     updateModelMatrix();
-    players.emplace_back(glm::vec3(position), glm::vec3(scale));
 }
 
 CubePlayer::~CubePlayer()
@@ -86,6 +84,25 @@ void CubePlayer::UpdatePosition(glm::vec3 direction)
 {
     position = position + direction * speedControl;
     updateModelMatrix();
+
+    //glm::vec3 tentativePosition = position + direction * speedControl;
+    //AABB playerBox = CalculateAABB({ tentativePosition, scale }); // Assuming scale can be used to represent size here
+
+    //// Assume cubes and pyramids are stored in std::vector<Cube> and std::vector<Pyramid>
+    //bool collisionDetected = false;
+    //for (const auto& cube : Cube::cubes) { // Assuming cubes is accessible here
+    //    if (CheckAABBCollision(playerBox, CalculateAABB(cube.GetCollisionData()))) {
+    //        collisionDetected = true;
+    //        break;
+    //    }
+    //}
+
+    //// Repeat for pyramids if necessary
+
+    //if (!collisionDetected) {
+    //    position = tentativePosition; // Update position only if no collision
+    //    updateModelMatrix(); // Update the model matrix with the new position
+    //}
 }
 
 void CubePlayer::SetRotation(float angle, glm::vec3 axis)
@@ -110,6 +127,11 @@ bool CubePlayer::collisionDetection(const PlayerCollision& cube1, const PlayerCo
     return colX && colY && colZ;
 }
 
+//bool CubePlayer::CheckAABBCollision(const AABB& a, const AABB& b)
+//{
+//    return false;
+//}
+
 void CubePlayer::GeneratePlayer(float w, float h, float d, float r, float g, float b) {
     // Define the half extents of the cube
     float hw = w * 0.5f;
@@ -126,59 +148,58 @@ void CubePlayer::GeneratePlayer(float w, float h, float d, float r, float g, flo
     };
 
     vertices = {
-        // Front face
-        {{ hw, -hh, hd}, color, baryCoords[0]}, // Bottom Right
-        {{-hw, -hh, hd}, color, baryCoords[1]}, // Bottom Left
-        {{ hw, hh, hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw, hh, hd}, color, baryCoords[0]},//Top Right
-        {{-hw, hh, hd}, color, baryCoords[1]},// Top Left
-        {{-hw, -hh, hd}, color, baryCoords[2]}, //Bottom Left
-
-        // Back face
-        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
-        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
-        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
-
-        // Left face
-        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
-        {{-hw, -hh,  hd}, color, baryCoords[1]}, // Bottom Right
-        {{-hw,  hh,  hd}, color, baryCoords[2]}, // Top Right
-
-        {{-hw,  hh,  hd}, color, baryCoords[0]}, // Top Right
-        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
-        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
-        // Right face
-
-        {{ hw, -hh,  hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
-        {{ hw,  hh,  hd}, color, baryCoords[1]}, // Top Left
-        {{ hw, -hh,  hd}, color, baryCoords[2]}, // Bottom Left
-
-        // Top face
-        {{-hw,  hh,  hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw,  hh,  hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
-        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
-        {{-hw,  hh,  hd}, color, baryCoords[2]}, // Bottom Left
-
-        // Bottom face
-        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw, -hh,  hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw, -hh,  hd}, color, baryCoords[0]}, // Top Right
-        {{-hw, -hh,  hd}, color, baryCoords[1]}, // Top Left
-        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
+    {{ hw, -hh, hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Right
+    {{-hw, -hh, hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Left
+    {{ hw, hh, hd}, baryCoords[2] , {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw, hh, hd}, baryCoords[0] , {1.0f, 1.0f}},//Top Right
+    {{-hw, hh, hd}, baryCoords[1] , {0.0f, 1.0f}},// Top Left
+    {{-hw, -hh, hd}, baryCoords[2], {0.0f, 0.0f}}, //Bottom Left
+    
+    // Back face
+    {{-hw, -hh, -hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw, -hh, -hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw,  hh, -hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw,  hh, -hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw,  hh, -hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw, -hh, -hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    
+    // Left face     
+    {{-hw, -hh, -hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{-hw, -hh,  hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{-hw,  hh,  hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{-hw,  hh,  hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw,  hh, -hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw, -hh, -hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    // Right face    
+    
+    {{ hw, -hh,  hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw, -hh, -hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw,  hh, -hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw,  hh, -hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{ hw,  hh,  hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{ hw, -hh,  hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    
+    // Top face      
+    {{-hw,  hh,  hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw,  hh,  hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw,  hh, -hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw,  hh, -hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw,  hh, -hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw,  hh,  hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    
+    // Bottom face   
+    {{-hw, -hh, -hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw, -hh, -hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw, -hh,  hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw, -hh,  hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw, -hh,  hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw, -hh, -hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
     };
 
 }
@@ -199,11 +220,11 @@ void CubePlayer::setupMesh()
     glEnableVertexAttribArray(0);
 
     // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PlayerVertex), (void*)offsetof(PlayerVertex, Color));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PlayerVertex), (void*)offsetof(PlayerVertex, Barycentric));
     glEnableVertexAttribArray(1);
 
     // Barycentric coord
-    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(PlayerVertex), (void*)offsetof(PlayerVertex, Barycentric));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PlayerVertex), (void*)offsetof(PlayerVertex, TexMex));
     glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);

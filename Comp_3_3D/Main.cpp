@@ -71,13 +71,17 @@ int main() {
    
     TexMex myTex("C:/Users/Nesli/Documents/3D Prog/Compulsory_3/3d_Comp_3/Comp_3_3D/Assets/PZ.jpg", "diffuse", false);
 
+    TexMex myTexTwo("C:/Users/Nesli/Documents/3D Prog/Compulsory_3/3d_Comp_3/Comp_3_3D/Assets/images.jpg", "diffuse", false);
+
     Shader myShader("shader.vs", "shader.fs");
+
+    Shader myOtherShader("shader.vs", "shader.fs");
 
     Cube surface(20.f, 0.5f, 20.f, 0.5f, 0.5f, 0.5f, 0.f, 0.f, 0.f);
 
     CubePlayer player(1.f, 1.f, 1.f, 0.5f, 0.f, 1.f, 3.f, 1.f, 0.f);
 
-    Pyramid pyraOne(1.f, 2.f, 0.6f, 0.3f, 0.0f, 0.f, 0.5f, -5.f);
+    Pyramid pyraOne(1.f, 2.f, 0.6f, 0.3f, 0.0f, 5.f, 0.5f, 1.f);
 
     Pyramid pyraTwo(2.f, -1.f, 0.6f, 0.3f, 0.0f, 0.f, 3.5f, 1.f);
 
@@ -135,16 +139,24 @@ int main() {
         myShader.setMat4("projection", projection);
         myShader.setMat4("view", view);
         myShader.setMat4("model", model);
+
+        myOtherShader.use();
+        myTexTwo.UseTexture(GL_TEXTURE1);
+        myOtherShader.setInt("textureSampler", 1);
+        myOtherShader.setFloat("time", currentFrame);
+        myOtherShader.setMat4("projection", projection);
+        myOtherShader.setMat4("view", view);
+        myOtherShader.setMat4("model", model);
         spherOne.UpdatePosition(path, deltaTime);
         // Render the cube
         surface.Draw(myShader);
         spherOne.Draw(myShader);
         path.Draw(myShader);
-        /*player.Draw(myShader);
-        pyraOne.Draw(myShader);
+        player.Draw(myOtherShader);
+        pyraOne.Draw(myOtherShader);
         pyraTwo.Draw(myShader);
         
-        */
+        
         
         // Swap buffers and poll IO events
         glfwSwapBuffers(window);

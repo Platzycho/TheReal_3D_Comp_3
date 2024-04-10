@@ -7,7 +7,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 struct PlayerVertex {
-	glm::vec3 Position, Color, Barycentric;
+	glm::vec3 Position, Barycentric;
+	glm::vec2 TexMex;
 };
 
 struct PlayerCollision {
@@ -16,7 +17,22 @@ struct PlayerCollision {
 	PlayerCollision(glm::vec3 pos, glm::vec3 sz) : position(pos), size(sz) {}
 };
 
+//struct AABB {
+//	glm::vec3 min;
+//	glm::vec3 max;
+//};
+//
+//AABB CalculateAABB(const PlayerCollision& object) {
+//	AABB box;
+//	box.min = object.position - object.size * 0.5f;
+//	box.max = object.position + object.size * 0.5f;
+//	return box;
+//}
+
+
+
 class Shader;
+
 
 class CubePlayer
 {
@@ -31,8 +47,7 @@ public:
 	void SetRotation(float angle, glm::vec3 axis);
 	void GeneratePlayer(float w, float h, float d, float r, float g, float b);
 	static bool collisionDetection(const PlayerCollision& cube1, const PlayerCollision& cube2);
-
-	static std::vector<PlayerCollision> players;
+	//bool CheckAABBCollision(const AABB& a, const AABB& b);
 
 
 private:
