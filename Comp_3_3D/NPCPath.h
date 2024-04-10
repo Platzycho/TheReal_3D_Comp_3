@@ -7,7 +7,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 struct PathVertex {
-	glm::vec3 Position, Color, Barycentric;
+	glm::vec3 Position, Barycentric;
+	glm::vec2 TexMex;
 
 };
 

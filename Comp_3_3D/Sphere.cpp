@@ -76,8 +76,11 @@ void Sphere::GenerateSphere(float radius, unsigned int sectCount, unsigned int s
             y = xy * sinf(sectorAngle); // r * cos(u) * sin(v)
             SphereVertex vertex;
             vertex.Position = glm::vec3(x, y, z);
-            vertex.Color = color;
+            float u = (float)j / sectCount;
+            float v = (float)i / stkCount;
+            vertex.TexMex = glm::vec2(u, v);
 
+            std::cout << u << std::endl;
             // Simplistic approach for barycentric coordinates for visualization
             vertex.Barycentric = (i + j) % 2 == 0 ? glm::vec3(1.0, 0.0, 0.0) : glm::vec3(0.0, 1.0, 0.0);
 
@@ -123,11 +126,11 @@ void Sphere::SetupMesh()
     glEnableVertexAttribArray(0);
 
     // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(SphereVertex), (void*)offsetof(SphereVertex, Color));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(SphereVertex), (void*)offsetof(SphereVertex, Barycentric));
     glEnableVertexAttribArray(1);
 
     // Barycentric coord
-    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(SphereVertex), (void*)offsetof(SphereVertex, Barycentric));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(SphereVertex), (void*)offsetof(SphereVertex, TexMex));
     glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);

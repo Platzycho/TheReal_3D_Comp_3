@@ -83,59 +83,58 @@ void Cube::GenerateCube(float w, float h, float d, float r, float g, float b) {
     };
 
     vertices = {
-        // Front face
-        {{ hw, -hh, hd}, color, baryCoords[0]}, // Bottom Right
-        {{-hw, -hh, hd}, color, baryCoords[1]}, // Bottom Left
-        {{ hw, hh, hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw, hh, hd}, color, baryCoords[0]},//Top Right
-        {{-hw, hh, hd}, color, baryCoords[1]},// Top Left
-        {{-hw, -hh, hd}, color, baryCoords[2]}, //Bottom Left
-
-        // Back face
-        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
-        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
-        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
-
-        // Left face
-        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
-        {{-hw, -hh,  hd}, color, baryCoords[1]}, // Bottom Right
-        {{-hw,  hh,  hd}, color, baryCoords[2]}, // Top Right
-
-        {{-hw,  hh,  hd}, color, baryCoords[0]}, // Top Right
-        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
-        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
-        // Right face
-
-        {{ hw, -hh,  hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
-        {{ hw,  hh,  hd}, color, baryCoords[1]}, // Top Left
-        {{ hw, -hh,  hd}, color, baryCoords[2]}, // Bottom Left
-
-        // Top face
-        {{-hw,  hh,  hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw,  hh,  hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw,  hh, -hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw,  hh, -hd}, color, baryCoords[0]}, // Top Right
-        {{-hw,  hh, -hd}, color, baryCoords[1]}, // Top Left
-        {{-hw,  hh,  hd}, color, baryCoords[2]}, // Bottom Left
-
-        // Bottom face
-        {{-hw, -hh, -hd}, color, baryCoords[0]}, // Bottom Left
-        {{ hw, -hh, -hd}, color, baryCoords[1]}, // Bottom Right
-        {{ hw, -hh,  hd}, color, baryCoords[2]}, // Top Right
-
-        {{ hw, -hh,  hd}, color, baryCoords[0]}, // Top Right
-        {{-hw, -hh,  hd}, color, baryCoords[1]}, // Top Left
-        {{-hw, -hh, -hd}, color, baryCoords[2]}, // Bottom Left
+    {{ hw, -hh, hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Right
+    {{-hw, -hh, hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Left
+    {{ hw, hh, hd}, baryCoords[2] , {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw, hh, hd}, baryCoords[0] , {1.0f, 1.0f}},//Top Right
+    {{-hw, hh, hd}, baryCoords[1] , {0.0f, 1.0f}},// Top Left
+    {{-hw, -hh, hd}, baryCoords[2], {0.0f, 0.0f}}, //Bottom Left
+    
+    // Back face
+    {{-hw, -hh, -hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw, -hh, -hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw,  hh, -hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw,  hh, -hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw,  hh, -hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw, -hh, -hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    
+    // Left face     
+    {{-hw, -hh, -hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{-hw, -hh,  hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{-hw,  hh,  hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{-hw,  hh,  hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw,  hh, -hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw, -hh, -hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    // Right face    
+    
+    {{ hw, -hh,  hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw, -hh, -hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw,  hh, -hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw,  hh, -hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{ hw,  hh,  hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{ hw, -hh,  hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    
+    // Top face      
+    {{-hw,  hh,  hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw,  hh,  hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw,  hh, -hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw,  hh, -hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw,  hh, -hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw,  hh,  hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
+    
+    // Bottom face   
+    {{-hw, -hh, -hd}, baryCoords[0], {1.0f, 0.0f}}, // Bottom Left
+    {{ hw, -hh, -hd}, baryCoords[1], {0.0f, 0.0f}}, // Bottom Right
+    {{ hw, -hh,  hd}, baryCoords[2], {1.0f, 1.0f}}, // Top Right
+    
+    {{ hw, -hh,  hd}, baryCoords[0], {1.0f, 1.0f}}, // Top Right
+    {{-hw, -hh,  hd}, baryCoords[1], {0.0f, 1.0f}}, // Top Left
+    {{-hw, -hh, -hd}, baryCoords[2], {0.0f, 0.0f}}, // Bottom Left
     };
 
 }
@@ -156,11 +155,11 @@ void Cube::setupMesh()
     glEnableVertexAttribArray(0);
 
     // Color attribute
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Color));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Barycentric));
     glEnableVertexAttribArray(1);
 
     // Barycentric coord
-    glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Barycentric));
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexMex));
     glEnableVertexAttribArray(2);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);

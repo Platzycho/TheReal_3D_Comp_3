@@ -10,6 +10,7 @@
 #include "Sphere.h"
 #include "CubePlayer.h"
 #include "NPCPath.h"
+#include "TexMex.h"
 #include <iostream>
 #include <algorithm>
 #include <cmath>
@@ -68,6 +69,8 @@ int main() {
 
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
    
+    TexMex myTex("C:/Users/Nesli/Documents/3D Prog/Compulsory_3/3d_Comp_3/Comp_3_3D/Assets/PZ.jpg", "diffuse", false);
+
     Shader myShader("shader.vs", "shader.fs");
 
     Cube surface(20.f, 0.5f, 20.f, 0.5f, 0.5f, 0.5f, 0.f, 0.f, 0.f);
@@ -115,8 +118,7 @@ int main() {
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-	    glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)800 / (float)600, 0.1f, 100.0f);/*
-        glUniformMatrix4fv(glGetUniformLocation(myShader.ID, "view"), 1, GL_FALSE, glm::value_ptr(view));*/
+	    glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)800 / (float)600, 0.1f, 100.0f);
         glm::vec3 lightDir = glm::normalize(glm::vec3(-1.0f, -1.0f, -1.0f));
 
         // Create transformations and pass them to the shaders
@@ -125,11 +127,10 @@ int main() {
         // Rotate the cube over time  
         rotationAngle += 0.0f;
         
-        player.SetRotation(rotationAngle, glm::vec3(0.5f, 0.3f, 0.6f));/*
-        glUniformMatrix4fv(glGetUniformLocation(myShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(model));
-
-        glUniformMatrix4fv(glGetUniformLocation(myOtherShader.ID, "model"), 1, GL_FALSE, glm::value_ptr(model));*/
+        player.SetRotation(rotationAngle, glm::vec3(0.5f, 0.3f, 0.6f));
         myShader.use();
+        myTex.UseTexture(GL_TEXTURE0);
+        myShader.setInt("textureSampler", 0);
         myShader.setFloat("time", currentFrame);
         myShader.setMat4("projection", projection);
         myShader.setMat4("view", view);
@@ -137,11 +138,13 @@ int main() {
         spherOne.UpdatePosition(path, deltaTime);
         // Render the cube
         surface.Draw(myShader);
-        player.Draw(myShader);
-        pyraOne.Draw(myShader);
-        pyraTwo.Draw(myShader);
         spherOne.Draw(myShader);
         path.Draw(myShader);
+        /*player.Draw(myShader);
+        pyraOne.Draw(myShader);
+        pyraTwo.Draw(myShader);
+        
+        */
         
         // Swap buffers and poll IO events
         glfwSwapBuffers(window);

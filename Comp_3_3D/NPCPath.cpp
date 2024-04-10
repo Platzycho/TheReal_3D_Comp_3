@@ -7,7 +7,7 @@ NPCPath::NPCPath(float t, float tMax, float step, float radius, float r, float g
 	GeneratePath(t, tMax, step, radius); 
 	for (const auto& point : curvePoints) {
 		// Assuming a default color (e.g., white) and barycentric (you can adjust these as needed)
-		vertices.push_back({ glm::vec3(point, posZ), glm::vec3(r, g, b), glm::vec3(1.0f, 0.0f, 0.0f) });
+		vertices.push_back({ glm::vec3(point, posZ), glm::vec3(1.0f, 0.0f, 0.0f), glm::vec2(1.0f, 1.0f) });
 	}
 	SetupMesh();
 	rotationAngle = 0;
@@ -55,11 +55,11 @@ void NPCPath::SetupMesh()
 	glEnableVertexAttribArray(0);
 
 	// Color attribute
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PathVertex), (void*)offsetof(PathVertex, Color));
+	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(PathVertex), (void*)offsetof(PathVertex, Barycentric));
 	glEnableVertexAttribArray(1);
 
 	// Barycentric attribute 
-	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, sizeof(PathVertex), (void*)offsetof(PathVertex, Barycentric));
+	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(PathVertex), (void*)offsetof(PathVertex, TexMex));
 	glEnableVertexAttribArray(2);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);

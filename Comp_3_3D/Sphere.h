@@ -7,7 +7,8 @@
 #include "NPCPath.h"
 
 struct SphereVertex {
-	glm::vec3 Position, Color, Barycentric;
+	glm::vec3 Position, Barycentric;
+	glm::vec2 TexMex;
 
 };
 
@@ -18,6 +19,8 @@ struct SphereCollision {
 };
 
 class NPCPath;
+
+class Shader;
 
 class Sphere
 {
