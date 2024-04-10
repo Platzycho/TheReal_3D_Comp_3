@@ -1,5 +1,4 @@
 #include "CubePlayer.h"
-#include "Cube.h"
 #include "Shader.h"
 
 CubePlayer::CubePlayer(float width, float height, float depth, float r, float g, float b, float posX, float posY, float posZ) : position(glm::vec3(posX, posY, posZ)), scale(glm::vec3(1.0f, 1.0f, 1.0f))

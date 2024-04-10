@@ -3,68 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\NPCPath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:NPCPath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Object.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Sphere.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Sphere.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Pyramid.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Pyramid.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\CubePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:CubePlayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Sphere.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Sphere.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\CubePlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:CubePlayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\NPCPath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:NPCPath.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\TexMex.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:TexMex.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\NPCPath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:NPCPath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Structs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Structs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Cube.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Object.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Cube.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\TexMex.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:TexMex.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\NPCPath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:NPCPath.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Includes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3A408910-BF06-450C-8346-8671D3EF863B}|Comp_3_3D.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,17 +50,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "NPCPath.h",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\NPCPath.h",
               "RelativeDocumentMoniker": "NPCPath.h",
               "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\NPCPath.h",
               "RelativeToolTip": "NPCPath.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-09T20:10:20.834Z",
               "IsPinned": true,
@@ -92,13 +68,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Object.cpp",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Object.cpp",
               "RelativeDocumentMoniker": "Object.cpp",
               "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Object.cpp",
               "RelativeToolTip": "Object.cpp",
-              "ViewState": "AQIAAMoAAAAAAAAAAAAAAAMAAAATAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-10T12:28:16.165Z",
               "IsPinned": true,
@@ -106,85 +82,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Pyramid.h",
-              "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Pyramid.h",
-              "RelativeDocumentMoniker": "Pyramid.h",
-              "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Pyramid.h",
-              "RelativeToolTip": "Pyramid.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-09T18:16:49.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Pyramid.cpp",
-              "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Pyramid.cpp",
-              "RelativeDocumentMoniker": "Pyramid.cpp",
-              "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Pyramid.cpp",
-              "RelativeToolTip": "Pyramid.cpp",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAABsAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-09T18:16:55.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "CubePlayer.cpp",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\CubePlayer.cpp",
               "RelativeDocumentMoniker": "CubePlayer.cpp",
               "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\CubePlayer.cpp",
               "RelativeToolTip": "CubePlayer.cpp",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAAAIgAAAAYAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-09T19:27:10.944Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "CubePlayer.h",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\CubePlayer.h",
               "RelativeDocumentMoniker": "CubePlayer.h",
               "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\CubePlayer.h",
               "RelativeToolTip": "CubePlayer.h",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB0AAAA3AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-04-09T19:27:05.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Sphere.cpp",
-              "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Sphere.cpp",
-              "RelativeDocumentMoniker": "Sphere.cpp",
-              "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Sphere.cpp",
-              "RelativeToolTip": "Sphere.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-09T18:51:43.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 9,
               "Title": "Main.cpp",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Main.cpp",
               "RelativeDocumentMoniker": "Main.cpp",
               "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Main.cpp",
               "RelativeToolTip": "Main.cpp",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAJ4AAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-03-19T09:51:37.607Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Includes.h",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Includes.h",
               "RelativeDocumentMoniker": "Includes.h",
@@ -197,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "TexMex.h",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\TexMex.h",
               "RelativeDocumentMoniker": "TexMex.h",
@@ -210,20 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Sphere.h",
-              "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Sphere.h",
-              "RelativeDocumentMoniker": "Sphere.h",
-              "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Sphere.h",
-              "RelativeToolTip": "Sphere.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-09T18:51:40.301Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Object.h",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Object.h",
               "RelativeDocumentMoniker": "Object.h",
@@ -236,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 5,
               "Title": "Structs.h",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Structs.h",
               "RelativeDocumentMoniker": "Structs.h",
@@ -249,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "NPCPath.cpp",
               "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\NPCPath.cpp",
               "RelativeDocumentMoniker": "NPCPath.cpp",
@@ -258,32 +182,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-04-09T20:10:45.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Cube.h",
-              "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Cube.h",
-              "RelativeDocumentMoniker": "Cube.h",
-              "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Cube.h",
-              "RelativeToolTip": "Cube.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-03-19T11:04:18.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Cube.cpp",
-              "DocumentMoniker": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Cube.cpp",
-              "RelativeDocumentMoniker": "Cube.cpp",
-              "ToolTip": "C:\\Users\\Nesli\\Documents\\3D Prog\\Compulsory_3\\3d_Comp_3\\Comp_3_3D\\Cube.cpp",
-              "RelativeToolTip": "Cube.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-19T11:04:20.137Z",
               "EditorCaption": ""
             }
           ]
