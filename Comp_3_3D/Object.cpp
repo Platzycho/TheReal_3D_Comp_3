@@ -3,8 +3,10 @@
 #include "NPCPath.h"
 #include <iostream>
 
+std::vector<Object*> objects;
 
 const double M_PI = 3.141592653589793;
+
 
 Object::Object(int objectType, float w, float h, float d, float r, float g, float b, float posX, float posY, float posZ) : Position(glm::vec3(posX, posY, posZ)), Scale(glm::vec3(1.0f, 1.0f, 1.0f))
 {
@@ -26,6 +28,7 @@ Object::Object(int objectType, float w, float h, float d, float r, float g, floa
     rotationAngle = 0;
     rotationAxis = glm::vec3(1.0f, 1.0f, 1.0f);
     updateModelMatrix();
+    objects.push_back(this);
 }
 
 Object::~Object()
@@ -236,6 +239,15 @@ void Object::UpdatePosition(const NPCPath& path, float deltaTime)
     this->Position = glm::vec3(pos2D, path.position.z);
     updateModelMatrix();
 }
+
+Collision Object::getCollisionData() const
+{
+    return Collision{ Position, Scale };
+}
+
+
+
+
 
 void Object::SetupArrMesh()
 {

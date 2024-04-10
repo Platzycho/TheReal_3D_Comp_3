@@ -5,10 +5,10 @@
 #include "glm/gtc/type_ptr.hpp"
 #include "Shader.h"
 #include "Camera.h"
+#include "Object.h"
 #include "CubePlayer.h"
 #include "NPCPath.h"
 #include "TexMex.h"
-#include "Object.h"
 #include <iostream>
 #include <algorithm>
 #include <cmath>
@@ -77,8 +77,6 @@ int main() {
 
     Object surface(0, 20.f, 0.5f, 20.f, 0.5f, 0.5f, 0.5f, 0.f, 0.f, 0.f);
 
-    CubePlayer player(1.f, 1.f, 1.f, 0.5f, 0.f, 1.f, 3.f, 1.f, 0.f);
-
     Object pyraOne(1, 2.f, 1.f, 2.f, 0.6f, 0.3f, 0.0f, 5.f, 0.5f, 1.f);
 
     Object pyraTwo(1, 2.f, 2.f, -1.f, 0.6f, 0.3f, 0.0f, 0.f, 3.5f, 1.f);
@@ -86,6 +84,8 @@ int main() {
     Object spherOne(2, 1.f, 2.f, 2.f, 1.f, 0.3f, 0.3f, 0.f, 0.f, 0.f);
 
     NPCPath path(0.0f, 20.0f, 0.01f, 7.0f, 1.f, 0.3f, 0.5f, 0.f, 0.f, 0.f);
+
+    CubePlayer player(1.f, 1.f, 1.f, 0.5f, 0.f, 1.f, 3.f, 1.f, 0.f);
 
     cameraDirection = glm::normalize(cameraDirection);
 
@@ -151,10 +151,10 @@ int main() {
        
         spherOne.DrawElement(myShader);
         path.Draw(myShader);
-        player.Draw(myOtherShader);
         pyraOne.DrawArray(myOtherShader);
         pyraTwo.DrawArray(myShader);
-        
+
+        player.Draw(myOtherShader);
         surface.DrawArray(myShader);
         
         

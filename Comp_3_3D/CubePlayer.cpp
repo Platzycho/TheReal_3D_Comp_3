@@ -1,4 +1,5 @@
 #include "CubePlayer.h"
+#include "Object.h"
 #include "Shader.h"
 
 CubePlayer::CubePlayer(float width, float height, float depth, float r, float g, float b, float posX, float posY, float posZ) : position(glm::vec3(posX, posY, posZ)), scale(glm::vec3(1.0f, 1.0f, 1.0f))
@@ -80,27 +81,25 @@ void CubePlayer::PlayerInput(GLFWwindow* window, float deltaTime)
 
 void CubePlayer::UpdatePosition(glm::vec3 direction)
 {
-    position = position + direction * speedControl;
-    updateModelMatrix();
+  /*  position = position + direction * speedControl;
+    updateModelMatrix();*/
 
-    //glm::vec3 tentativePosition = position + direction * speedControl;
-    //AABB playerBox = CalculateAABB({ tentativePosition, scale }); // Assuming scale can be used to represent size here
+    glm::vec3 tentativePosition = position + direction + speedControl;
+    AABB playerBox = CalculateAABB({tentativePosition, scale });
 
-    //// Assume cubes and pyramids are stored in std::vector<Cube> and std::vector<Pyramid>
-    //bool collisionDetected = false;
-    //for (const auto& cube : Cube::cubes) { // Assuming cubes is accessible here
-    //    if (CheckAABBCollision(playerBox, CalculateAABB(cube.GetCollisionData()))) {
-    //        collisionDetected = true;
-    //        break;
-    //    }
-    //}
+    bool collisionDetected = false;
+    for (const auto& object : Object::objects) {
+        if (CheckAABBCollision(playerBox, CalculateAABB(object->getCollisionData()))) {
+            collisionDetected = true;
+            break;
+        }
 
-    //// Repeat for pyramids if necessary
+    }
 
-    //if (!collisionDetected) {
-    //    position = tentativePosition; // Update position only if no collision
-    //    updateModelMatrix(); // Update the model matrix with the new position
-    //}
+    if (!collisionDetected) {
+        position = tentativePosition;
+        updateModelMatrix(); 
+    }  
 }
 
 void CubePlayer::SetRotation(float angle, glm::vec3 axis)
@@ -110,20 +109,20 @@ void CubePlayer::SetRotation(float angle, glm::vec3 axis)
     updateModelMatrix();
 }
 
-bool CubePlayer::collisionDetection(const Collision& cube1, const Collision& cube2)
-{
-    glm::vec3 minA = cube1.position - cube1.size * 0.5f;
-    glm::vec3 maxA = cube1.position + cube1.size * 0.5f;
-
-    glm::vec3 minB = cube2.position - cube2.size * 0.5f;
-    glm::vec3 maxB = cube2.position + cube2.size * 0.5f;
-
-    bool colX = minA.x <= maxB.x && maxA.x >= minB.x;
-    bool colY = minA.y <= maxB.y && maxA.y >= minB.y;
-    bool colZ = minA.z <= maxB.z && maxA.z >= minB.z;
-
-    return colX && colY && colZ;
-}
+//bool CubePlayer::collisionDetection(const Collision& cube1, const Collision& cube2)
+//{
+//    glm::vec3 minA = cube1.position - cube1.size * 0.5f;
+//    glm::vec3 maxA = cube1.position + cube1.size * 0.5f;
+//
+//    glm::vec3 minB = cube2.position - cube2.size * 0.5f;
+//    glm::vec3 maxB = cube2.position + cube2.size * 0.5f;
+//
+//    bool colX = minA.x <= maxB.x && maxA.x >= minB.x;
+//    bool colY = minA.y <= maxB.y && maxA.y >= minB.y;
+//    bool colZ = minA.z <= maxB.z && maxA.z >= minB.z;
+//
+//    return colX && colY && colZ;
+//}
 
 //bool CubePlayer::CheckAABBCollision(const AABB& a, const AABB& b)
 //{
