@@ -41,6 +41,7 @@ float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 float rotationAngle = 0.0f;
 
+
 int main() {
 	
 	glfwInit();
@@ -84,6 +85,8 @@ int main() {
     Object spherOne(2, 1.f, 2.f, 2.f, 1.f, 0.3f, 0.3f, 0.f, 0.f, 0.f);
 
     NPCPath path(0.0f, 20.0f, 0.01f, 7.0f, 1.f, 0.3f, 0.5f, 0.f, 0.f, 0.f);
+    
+    NPCPath pathTwo(0.0f, 20.0f, 0.01f, 7.0f, 1.f, 0.3f, 0.5f, 0.f, 0.f, 0.f);
 
     CubePlayer player(1.f, 1.f, 1.f, 0.5f, 0.f, 1.f, 3.f, 1.f, 0.f);
 
@@ -127,9 +130,9 @@ int main() {
         glm::mat4 model = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
 
         // Rotate the cube over time  
-        rotationAngle += 0.0f;
-        
-        player.SetRotation(rotationAngle, glm::vec3(0.5f, 0.3f, 0.6f));
+        rotationAngle += 0.1f;
+        path.SetRotation(rotationAngle, glm::vec3(0.5f, 0.3f, 0.6f));/*
+        player.SetRotation(rotationAngle, glm::vec3(0.5f, 0.3f, 0.6f));*/
         myShader.use();
         myTex.UseTexture(GL_TEXTURE0);
         myShader.setInt("textureSampler", 0);
@@ -146,9 +149,8 @@ int main() {
         myOtherShader.setMat4("view", view);
         myOtherShader.setMat4("model", model);
 
-        spherOne.UpdatePosition(path, deltaTime);
+
         // Render the cube
-       
         spherOne.DrawElement(myShader);
         path.Draw(myShader);
         pyraOne.DrawArray(myOtherShader);

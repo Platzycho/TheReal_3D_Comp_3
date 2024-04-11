@@ -15,9 +15,9 @@ public:
 	void GenerateCube(float w, float h, float d, float r, float g, float b);
 	void GenerateSphere(float radius, unsigned int sectCount, unsigned int stkCount, float r, float g, float b);
 	void UpdatePosition(const NPCPath& path, float deltaTime);
+	void UpdateScale(int objectType, float w, float h, float d);
 	Collision getCollisionData() const;
 
-	static std::vector<Object*> objects;
 
 private:
 	unsigned int VAO, VBO, EBO;

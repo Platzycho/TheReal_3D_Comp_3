@@ -1,12 +1,10 @@
 ﻿  Main.cpp
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(206,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(207,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(211,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(212,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(213,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(214,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(227,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(221,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(222,17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(226,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(227,19): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(228,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(229,13): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\Main.cpp(242,44): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
-CubePlayer.obj : error LNK2001: unresolved external symbol "public: static class std::vector<class Object *,class std::allocator<class Object *> > Object::objects" (?objects@Object@@2V?$vector@PEAVObject@@V?$allocator@PEAVObject@@@std@@@std@@A)
-Object.obj : error LNK2001: unresolved external symbol "public: static class std::vector<class Object *,class std::allocator<class Object *> > Object::objects" (?objects@Object@@2V?$vector@PEAVObject@@V?$allocator@PEAVObject@@@std@@@std@@A)
-C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\x64\Debug\Comp_3_3D.exe : fatal error LNK1120: 1 unresolved externals
+  Comp_3_3D.vcxproj -> C:\Users\Nesli\Documents\3D Prog\Compulsory_3\3d_Comp_3\Comp_3_3D\x64\Debug\Comp_3_3D.exe

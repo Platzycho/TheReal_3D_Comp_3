@@ -145,6 +145,7 @@
     <ClInclude Include="Includes.h" />
     <ClInclude Include="NPCPath.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectManager.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Structs.h" />

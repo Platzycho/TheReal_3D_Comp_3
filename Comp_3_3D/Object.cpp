@@ -1,14 +1,13 @@
 #include "Object.h"
 #include "Shader.h"
 #include "NPCPath.h"
+#include "ObjectManager.h"
 #include <iostream>
-
-std::vector<Object*> objects;
 
 const double M_PI = 3.141592653589793;
 
 
-Object::Object(int objectType, float w, float h, float d, float r, float g, float b, float posX, float posY, float posZ) : Position(glm::vec3(posX, posY, posZ)), Scale(glm::vec3(1.0f, 1.0f, 1.0f))
+Object::Object(int objectType, float w, float h, float d, float r,  float g, float b, float posX, float posY, float posZ) : Position(glm::vec3(posX, posY, posZ)), Scale(glm::vec3(1.0f, 1.0f, 1.0f))
 {
     if (objectType == 0) {
         GenerateCube(w, h, d, r, g, b);
@@ -28,7 +27,7 @@ Object::Object(int objectType, float w, float h, float d, float r, float g, floa
     rotationAngle = 0;
     rotationAxis = glm::vec3(1.0f, 1.0f, 1.0f);
     updateModelMatrix();
-    objects.push_back(this);
+    ObjectManager::getInstance().addObject(this);
 }
 
 Object::~Object()
@@ -189,7 +188,6 @@ void Object::GenerateSphere(float radius, unsigned int sectCount, unsigned int s
             float v = (float)i / stkCount;
             vertex.TexMex = glm::vec2(u, v);
 
-            std::cout << u << std::endl;
             // Simplistic approach for barycentric coordinates for visualization
             vertex.Barycentric = (i + j) % 2 == 0 ? glm::vec3(1.0, 0.0, 0.0) : glm::vec3(0.0, 1.0, 0.0);
 
@@ -237,6 +235,28 @@ void Object::UpdatePosition(const NPCPath& path, float deltaTime)
     glm::vec2 pos2D = glm::mix(path.curvePoints[index], path.curvePoints[nextIndex], localT);
 
     this->Position = glm::vec3(pos2D, path.position.z);
+    updateModelMatrix();
+}
+
+void Object::UpdateScale(int objectType, float w, float h, float d)
+{
+    if (objectType == 0) {
+        GenerateCube(w, h, d, 0.f, 0.f, 0.f);
+        SetupArrMesh();
+    }
+    else if (objectType == 1) {
+        GeneratePyramid((w + d) / 2, h, 0.f, 0.f, 0.f);
+        SetupArrMesh();
+    }
+    else if (objectType == 2) {
+        GenerateSphere((w + h + d) / 3, 20, 20, 0.f, 0.f, 0.f);
+        SetupEleMesh();
+    }
+    else {
+        std::cout << "Invalid number" << std::endl;
+    }
+
+
     updateModelMatrix();
 }
 

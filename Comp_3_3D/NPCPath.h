@@ -10,7 +10,7 @@ public:
 	~NPCPath();
 	void Draw(Shader& shader);
 	void GeneratePath(float t, float tMax, float step, float radius);
-
+	void SetRotation(float angle, glm::vec3 axis);
 	std::vector<glm::vec2> curvePoints;
 	
 	glm::vec3 position;

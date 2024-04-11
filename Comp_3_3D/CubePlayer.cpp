@@ -1,5 +1,6 @@
 #include "CubePlayer.h"
 #include "Object.h"
+#include "ObjectManager.h"
 #include "Shader.h"
 
 CubePlayer::CubePlayer(float width, float height, float depth, float r, float g, float b, float posX, float posY, float posZ) : position(glm::vec3(posX, posY, posZ)), scale(glm::vec3(1.0f, 1.0f, 1.0f))
@@ -69,11 +70,11 @@ void CubePlayer::PlayerInput(GLFWwindow* window, float deltaTime)
 
     if (glfwGetKey(window, GLFW_KEY_E) == GLFW_PRESS)
     {
-        if (speedControl >= 1.5f) {
+        if (speedControl >= 5.f) {
             return;
         }
         else {
-            speedControl += 0.1f;
+            speedControl += 1.f;
         }
         
     }
@@ -84,17 +85,20 @@ void CubePlayer::UpdatePosition(glm::vec3 direction)
   /*  position = position + direction * speedControl;
     updateModelMatrix();*/
 
-    glm::vec3 tentativePosition = position + direction + speedControl;
+
+    glm::vec3 tentativePosition = position + direction * speedControl;
     AABB playerBox = CalculateAABB({tentativePosition, scale });
 
     bool collisionDetected = false;
-    for (const auto& object : Object::objects) {
+    for (const auto& object : ObjectManager::getInstance().getObjects()) {
         if (CheckAABBCollision(playerBox, CalculateAABB(object->getCollisionData()))) {
             collisionDetected = true;
             break;
         }
 
     }
+
+    std::cout << collisionDetected << std::endl;
 
     if (!collisionDetected) {
         position = tentativePosition;
@@ -109,25 +113,6 @@ void CubePlayer::SetRotation(float angle, glm::vec3 axis)
     updateModelMatrix();
 }
 
-//bool CubePlayer::collisionDetection(const Collision& cube1, const Collision& cube2)
-//{
-//    glm::vec3 minA = cube1.position - cube1.size * 0.5f;
-//    glm::vec3 maxA = cube1.position + cube1.size * 0.5f;
-//
-//    glm::vec3 minB = cube2.position - cube2.size * 0.5f;
-//    glm::vec3 maxB = cube2.position + cube2.size * 0.5f;
-//
-//    bool colX = minA.x <= maxB.x && maxA.x >= minB.x;
-//    bool colY = minA.y <= maxB.y && maxA.y >= minB.y;
-//    bool colZ = minA.z <= maxB.z && maxA.z >= minB.z;
-//
-//    return colX && colY && colZ;
-//}
-
-//bool CubePlayer::CheckAABBCollision(const AABB& a, const AABB& b)
-//{
-//    return false;
-//}
 
 void CubePlayer::GeneratePlayer(float w, float h, float d, float r, float g, float b) {
     // Define the half extents of the cube

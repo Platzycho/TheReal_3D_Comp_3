@@ -39,6 +39,13 @@ void NPCPath::GeneratePath(float t, float tMax, float step, float radius)
 	}
 }
 
+void NPCPath::SetRotation(float angle, glm::vec3 axis)
+{
+	rotationAngle = angle;
+	rotationAxis = axis;
+	updateModelMatrix();
+}
+
 void NPCPath::SetupMesh()
 {
 	glGenVertexArrays(1, &VAO);
